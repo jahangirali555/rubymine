@@ -1,0 +1,46 @@
+Welcome!
+
+
+
+<div><span class="pull-left"><h2> Company Name: <%= current_login.company_name %> </h2></span>
+<span class="pull-right"><h2>Username:<%= current_login.username %> </h2></span></div>
+
+<br />
+
+
+<!-- <h1>Listing All Logins(users)</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Company</th>
+      <th>Usertype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @login.each do |mylogin| %>
+      <tr>
+        <td><%= mylogin.username %></td>
+        <td><%= mylogin.email %></td>
+        <td><%= mylogin.first_name %></td>
+        <td><%= mylogin.last_name %></td>
+        <td><%= mylogin.company_id %></td>
+        <td><%= mylogin.usertype_id %></td>
+        <td><%= link_to 'Show', user_path %></td>
+        <td><%= link_to 'Edit', edit_login_registration_path(mylogin) %></td>
+      
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User(Sign Up)', new_login_registration_path %> -->

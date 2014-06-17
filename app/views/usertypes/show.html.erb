@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usertype:</strong>
+  <%= @usertype.usertype_id %>
+</p>
+
+<p>
+  <strong>Usertype name:</strong>
+  <%= @usertype.usertype_name %>
+</p>
+
+<p>
+  <strong>Can create:</strong>
+  <%= @usertype.can_create %>
+</p>
+
+<p>
+  <strong>Can delete:</strong>
+  <%= @usertype.can_delete %>
+</p>
+
+<p>
+  <strong>Can view:</strong>
+  <%= @usertype.can_view %>
+</p>
+
+<%= link_to 'Edit', edit_usertype_path(@usertype) %> |
+<%= link_to 'Back', usertypes_path %>
