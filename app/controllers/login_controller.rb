@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
+	 before_filter :authenticate_login!
   def index
-  	@login = Login.order("created_at DESC")
+  	# @company_names = current_login.company_name
+  	@login = Login.all.where(company_name: current_login.company_name)
   end
 end

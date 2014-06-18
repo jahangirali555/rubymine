@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'user' => 'login#index'
+  resources :users
+
+  get 'dashboard' => 'login#index'
   # get 'login/index'
 
   resources :usertypes
