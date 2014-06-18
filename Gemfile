@@ -32,6 +32,8 @@ gem "paperclip", "~> 4.1"
 
 gem 'bootstrap-sass', '~> 3.1.1'
 
+gem 'mail'
+
 
 # Confuguration for Heroku Deployement
 	#Start
