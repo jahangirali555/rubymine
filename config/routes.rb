@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :users
-
-  get 'dashboard' => 'login#index'
-  # get 'login/index'
+  resources :users 
 
   resources :usertypes
   resources :companies
