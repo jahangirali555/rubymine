@@ -7,11 +7,11 @@ class UserMailer < ActionMailer::Base
     mail(to: @user.email, subject: 'Welcome to My Awesome Site')
   end
 
-  def send_signup_email(user)
-    @user = user      
-      mail( to: 'jahangirali555@gmail.com',
-    subject: 'Thanks for signing up for our amazing app' )
+  # def send_signup_email(user)
+  #   @user = user      
+  #     mail( to: 'jahangirali555@gmail.com',
+  #   subject: 'Thanks for signing up for our amazing app' )
   
    
-    end
+  #   end
 end
