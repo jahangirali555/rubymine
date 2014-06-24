@@ -7,23 +7,24 @@
 
 <p>
   <strong>Usertype name:</strong>
-  <%= @usertype.usertype_name %>
+  <%= @usertype.usertype_title %>
 </p>
 
 <p>
   <strong>Can create:</strong>
-  <%= @usertype.can_create %>
+  <%= @usertype.can_add_user %>
+</p>
+
+<p>
+  <strong>Can View:</strong>
+  <%= @usertype.can_view_user %>
 </p>
 
 <p>
   <strong>Can delete:</strong>
-  <%= @usertype.can_delete %>
+  <%= @usertype.can_delete_user %>
 </p>
 
-<p>
-  <strong>Can view:</strong>
-  <%= @usertype.can_view %>
-</p>
 
 <%= link_to 'Edit', edit_usertype_path(@usertype) %> |
 <%= link_to 'Back', usertypes_path %>

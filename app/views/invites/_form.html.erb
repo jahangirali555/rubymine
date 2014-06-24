@@ -1,0 +1,29 @@
+<%= form_for(@invite) do |f| %>
+  <% if @invite.errors.any? %>
+    <!-- <div id="error_explanation"> -->
+    <div  class="form-group alert alert-danger alert-dismissable">
+      <button type="button" class="close" aria-hidden="true">&times;</button>
+      <h2><%= pluralize(@invite.errors.count, "error") %> prohibited this invite from being saved:</h2>
+
+      <ul>
+      <% @invite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form class="form-inline" role="form">
+   
+   <%= f.hidden_field :company_name, :value => @login.company_name, class: "form-control" %>
+   
+    <div class="input-group center">
+      <!-- <%= f.label :email %> -->
+      <%= f.email_field :email, class: "form-control" %>
+
+      <span class="input-group-btn">
+        <%= f.submit "Invite", class: "btn btn-success" %>
+      </span>
+    </div>
+</form>
+<% end %>

@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140618120907) do
+ActiveRecord::Schema.define(version: 20140620104741) do
 
-  create_table "companies", force: true do |t|
-    t.integer  "company_id"
-    t.string   "companyName"
+  create_table "invites", force: true do |t|
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "company_name"
   end
 
   create_table "logins", force: true do |t|
@@ -44,20 +44,12 @@ ActiveRecord::Schema.define(version: 20140618120907) do
   add_index "logins", ["email"], name: "index_logins_on_email", unique: true
   add_index "logins", ["reset_password_token"], name: "index_logins_on_reset_password_token", unique: true
 
-  create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "login"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "usertypes", force: true do |t|
     t.integer  "usertype_id"
-    t.string   "usertype_name"
-    t.string   "can_create"
-    t.string   "can_delete"
-    t.string   "can_view"
+    t.string   "usertype_title"
+    t.string   "can_add_user"
+    t.string   "can_view_user"
+    t.string   "can_delete_user"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

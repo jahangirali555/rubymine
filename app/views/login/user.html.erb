@@ -1,0 +1,51 @@
+<% if login_signed_in? %>
+
+      
+
+<div class="row">
+  <span class="pull-left"><h4>Welcome! <strong><%= current_login.company_name %></strong></h4></span>
+ <a href="<%= new_invite_path %>"> <button class="btn btn-primary pull-right" data-toggle="modal" data-target=".bs-example-modal-sm">Add</button></a>
+</div>
+<br />
+
+
+
+
+
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Mr. <%= current_login.username %> <strong>(User)</strong></div>
+
+  <!-- Table -->
+  <table class="table">
+
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Companyname</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+         <% @login.each do |log| %>
+          <tr>
+            <td><%= log.username %></td>
+            <td><%= log.company_name %></td>
+         
+          </tr>
+        <% end %>
+      </tbody>
+
+
+    
+  </table>
+</div>
+
+<% else %>
+<%=  get '/patients/:id', to: 'patients#show' %>
+<% end %>
+
+
+

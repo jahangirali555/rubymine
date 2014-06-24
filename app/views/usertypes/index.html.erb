@@ -16,10 +16,10 @@
     <% @usertypes.each do |usertype| %>
       <tr>
         <td><%= usertype.usertype_id %></td>
-        <td><%= usertype.usertype_name %></td>
-        <td><%= usertype.can_create %></td>
-        <td><%= usertype.can_delete %></td>
-        <td><%= usertype.can_view %></td>
+        <td><%= usertype.usertype_title %></td>
+        <td><%= usertype.can_add_user %></td>
+        <td><%= usertype.can_delete_user %></td>
+        <td><%= usertype.can_view_user %></td>
         <td><%= link_to 'Show', usertype %></td>
         <td><%= link_to 'Edit', edit_usertype_path(usertype) %></td>
         <td><%= link_to 'Destroy', usertype, method: :delete, data: { confirm: 'Are you sure?' } %></td>

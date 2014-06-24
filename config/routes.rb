@@ -1,14 +1,27 @@
 Rails.application.routes.draw do
 
-  resources :users
+  resources :invites
 
   get 'dashboard' => 'login#index'
+  get 'dashboard/user' => 'login#user'
+  get 'dashboard/admin' => 'login#admin'
+  get 'dashboard/show' => 'login#show'
+  get 'dashboard/edit' => 'login#edit'
+  delete 'dashboard/delete' => 'login#destroy'
+  put 'dashboard/update' => 'login#update'
+  get 'login' => 'login#show'
+
+
+  # get 'invite_register' => 'MyRegistrations#new'
+  # get 'invite' => 'login#new'
   # get 'login/index'
 
   resources :usertypes
-  resources :companies
+  devise_for :logins, controllers: { registrations: "logins/registrations" }
+  # resources :logins, only: [:show, :edit, :update]
 
-  devise_for :logins
+  # devise_for :admins, controllers: { sessions: "admins/sessions" }
+  # , :controllers => { :registrations => "my_registrations" }
   
 
   # The priority is based upon order of creation: first created -> highest priority.

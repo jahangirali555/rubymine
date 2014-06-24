@@ -6,4 +6,5 @@ class Login < ActiveRecord::Base
 
    has_many :company, dependent: :destroy
    has_many :usertypes, dependent: :destroy
+   belongs_to :logins
 end

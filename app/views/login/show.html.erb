@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+<% @login.each do |log| %>
+
+<p>
+  <strong>Username:</strong>
+  <%= log.username %>
+</p>
+<p>
+  <strong>Email:</strong>
+  <%= log.email %>
+</p>
+<p>
+  <strong>First Name:</strong>
+  <%= log.first_name %>
+</p>
+<p>
+  <strong>Last Name:</strong>
+  <%= log.last_name %>
+</p>
+<p>
+  <strong>Company Name:</strong>
+  <%= log.company_name %>
+</p>
+<p>
+  <strong>Type:</strong>
+  <% if log.usertype_id == 1 %>
+  Super Admin
+
+    <% else 
+    if log.usertype_id == 2 %>
+      Admin
+    <% else %>
+      User
+    <% end %>
+
+  <% end %>
+    
+  
+ 
+</p>
+
+
+
+
+
+<%= link_to 'Back', dashboard_path %>
+
+
+<% end %>
+
