@@ -36,7 +36,7 @@ Rails.application.configure do
   ActionMailer::Base.delivery_method = :smtp 
   ActionMailer::Base.smtp_settings =  { :address => "localhost", :port => 1025, :domain => "everydayrails.com" } 
    # - See more at: http://everydayrails.com/2011/05/26/rails-smtp-development.html#sthash.dNbUsvtJ.dpuf
-  config.action_mailer.default_url_options = { host: 'localhost:3000'}
+  # config.action_mailer.default_url_options = { host: 'localhost:3000'}
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

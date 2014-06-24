@@ -39,7 +39,7 @@ gem 'mailcatcher'
 
 # Confuguration for Heroku Deployement
 	#Start
-		group :production, :staging  do
+		group :production do
 			gem 'pg'
 			gem 'rails_12factor'
 			
