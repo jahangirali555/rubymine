@@ -39,13 +39,13 @@ gem 'mailcatcher'
 
 # Confuguration for Heroku Deployement
 	#Start
-		group :production do
+		group :production, :staging  do
 			gem 'pg'
 			gem 'rails_12factor'
 			
 		end
 		group :development, :test do
-			# gem 'sqlite3'	
+			gem 'sqlite3'	
 		end
 
 	#End
