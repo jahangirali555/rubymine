@@ -5,9 +5,16 @@ class Logins::RegistrationsController < Devise::RegistrationsController
   	if params[:company_name]
       @company =  Invite.where(company_name: params[:company_name]).first
     end
+    
+    if params[:email]
+      @invite_email =  params[:email]
+    end
+    
+
+   
       # @login = Login.find(params[:id])
     
-    @usertype =  "1"
+    @usertype =  "3" # The usertype will be  USER
   	
     build_resource({})
     respond_with self.resource

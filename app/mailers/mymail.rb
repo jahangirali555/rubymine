@@ -10,7 +10,7 @@ class Mymail < ActionMailer::Base
      @invite = invite
 
     @greeting = "We'll add our Greeting message here"
-    @link = "http://localhost:3000/logins/sign_up?company_name="+ @invite.company_name
+    @link = "http://192.168.100.15:3000/logins/sign_up?company_name="+ @invite.company_name+'&email='+@invite.email
 
     mail to: @invite.email, subject: "Please don not reply to this email!"
   end

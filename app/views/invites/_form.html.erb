@@ -15,11 +15,11 @@
 
 <form class="form-inline" role="form">
    
-   <%= f.hidden_field :company_name, :value => @login.company_name, class: "form-control" %>
+   <%= f.hidden_field :company_name,  :value => @login.company_name,  class: "form-control" %>
    
     <div class="input-group center">
       <!-- <%= f.label :email %> -->
-      <%= f.email_field :email, class: "form-control" %>
+      <%= f.email_field :email, :required => true, class: "form-control" %>
 
       <span class="input-group-btn">
         <%= f.submit "Invite", class: "btn btn-success" %>
