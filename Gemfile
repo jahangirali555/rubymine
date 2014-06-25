@@ -39,14 +39,15 @@ gem 'mailcatcher'
 
 # Confuguration for Heroku Deployement
 	#Start
-		group :production do
-			gem 'pg'
-			gem 'rails_12factor'
-			
-		end
 		group :development, :test do
-			gem 'sqlite3'	
+		        gem 'sqlite3'
 		end
+
+		group :production do
+		        gem 'pg'
+		  
+		end
+		
 
 	#End
 
@@ -68,3 +69,4 @@ gem 'mailcatcher'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'rails_12factor', group: :production
